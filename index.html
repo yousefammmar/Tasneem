@@ -47,7 +47,23 @@
 
     .socials a { font-size: 26px; margin-right: 14px; color: #fdf2f8; transition: 0.3s; }
     .socials a:hover { color: var(--accent); }
+  .socials a {
+  animation: iconPop 0.8s ease forwards;
+}
 
+.socials a:nth-child(1) { animation-delay: 0.3s; }
+.socials a:nth-child(2) { animation-delay: 0.45s; }
+
+@keyframes iconPop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
     section { padding: 90px 8%; }
     section h2 { font-size: 34px; margin-bottom: 25px; color: var(--accent); }
 
